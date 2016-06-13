@@ -1,0 +1,21 @@
+{
+  "name": "jenkins-blink",
+  "version": "1.0.0",
+  "description": "Get info on Jenkins build and set a colour or pattern for ThingM's blink(1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Jenkins",
+    "CI",
+    "ThingM",
+    "blink1"
+  ],
+  "author": "Qazzian",
+  "license": "MIT",
+  "dependencies": {
+    "jenkins": "^0.17.0",
+    "node-blink1": "^0.2.2"
+  }
+}
