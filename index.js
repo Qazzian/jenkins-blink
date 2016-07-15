@@ -1,15 +1,10 @@
-var Blink1 = require('node-blink1');
+#! /usr/bin/env node
 
-var devices = Blink1.devices(); // returns array of serial numbers
+var CONFIG = require('./config');
+var JenkinsServer = require('./jenkins/JenkinsServer');
+var BlinkController = require('./blink/blink');
+var Bridge = require('./lib/bridge');
 
-var blink1 = null;
-
-if( devices.length ) {
-	console.log(devices);
-    blink1 = new Blink1();
-}
-
-var lastColor = '#000000';
-var lastTime = 0;
-var lastLedn = 0;
-var lastRepeats = 0;
+var bridge = new Bridge(CONFIG, JenkinsServer, BlinkController);
+bridge.init();
+	
