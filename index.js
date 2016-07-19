@@ -7,4 +7,5 @@ var Bridge = require('./lib/bridge');
 
 var bridge = new Bridge(CONFIG, JenkinsServer, BlinkController);
 bridge.init();
+bridge.showJobStatus('develop-hybris-ci');
 	

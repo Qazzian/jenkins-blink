@@ -3,7 +3,7 @@ var BlinkUrlApi = require('./blinkUrlApi');
 
 var Blinker = function(serialNumber) {
 	try {
-		var devices = this.devices();
+		var devices = Blinker.devices();
 		serialNumber = serialNumber || devices[0];
 		
 		this.blinker = new BlinkHidApi(serialNumber);
@@ -21,7 +21,7 @@ Blinker.prototype = {
 	setColour: function(color, time) {
 		var self = this;
 		time = time || 0;
-		return self.blinker.fadeToRGB(time, color, 0);
+		return self.blinker.fadeToRGB(0, color, 0);
 	}
 };
 

@@ -1,6 +1,7 @@
 var Blink1 = require('node-blink1');
 
 var BlinkHidApi = function(serialNumber) {
+	this.blinker = new Blink1(serialNumber);
 }
 
 BlinkHidApi.devices = function() {
@@ -12,10 +13,11 @@ BlinkHidApi.prototype = {
 		var self = this;
 
 		return new Promise(function(resolve, reject) {
-			self.blinker.fadeToRGB(time, color.red(), color.green(), color.blue(), 0, function() {
+
+			self.blinker.fadeToRGB(ms || 0, color.red(), color.green(), color.blue(), 0, function(result) {
 				resolve();
 			});
-		}); 
+		});
 	}
 }
 
