@@ -6,6 +6,17 @@ var BlinkController = require('./blink/blink');
 var Bridge = require('./lib/bridge');
 
 var bridge = new Bridge(CONFIG, JenkinsServer, BlinkController);
+var intervalId;
+
+
 bridge.init();
-bridge.showJobStatus('develop-hybris-ci');
-	
+
+
+
+
+function main() {
+	bridge.showJobStatus('develop-hybris-ci');
+}
+
+main();
+intervalId = setInterval(main, 10000);
