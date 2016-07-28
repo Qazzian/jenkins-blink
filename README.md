@@ -44,11 +44,11 @@ The blink will change colour to match the build status of the jenkins job.
 
 ## Rough todo list
 
-Move the job name into config.
-Support more than one job.
-Create a proper config file and managment system.
-Support multiple effects on the blink such as flashing.
-Show a different colour if you are responsible for build failure.
+* Move the job name into config.
+* Support more than one job.
+* Create a proper config file and managment system.
+* Support multiple effects on the blink such as flashing or fading off after a time.
+* Show a different colour if you are responsible for build failure.
 
 ## Support and known issues
 
