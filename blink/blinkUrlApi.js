@@ -4,12 +4,12 @@ var BlinkUrlApi = function() {
 	var hostname = 'localhost';
 	var port = '8934';
 
-	this.fadeToRGB = function(ms, color, index) {
+	this.fadeToRGB = function(ms, color, ledSide) {
 		var hexCode = encodeURIComponent(color.hexString());
 		var requestSettings = {
 			host: hostname,
 			port: port,
-			path: '/blink1/fadeToRGB?rgb=' + hexCode// + '&time=' + ms.toString()
+			path: '/blink1/fadeToRGB?rgb=' + hexCode// + '&time=' + ms.toString() // + '&ledn=' + ledSide
 		}
 
 		return new Promise(function(resolve, reject) {

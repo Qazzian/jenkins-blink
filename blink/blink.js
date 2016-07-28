@@ -18,10 +18,11 @@ Blinker.devices = function(){
 }
 
 Blinker.prototype = {
-	setColour: function(color, time) {
+	setColour: function(color, time, ledSide) {
 		var self = this;
 		time = time || 0;
-		return self.blinker.fadeToRGB(0, color, 0);
+		ledSide = ledSide || 0;
+		return self.blinker.fadeToRGB(time, color, ledSide);
 	}
 };
 

@@ -9,12 +9,12 @@ BlinkHidApi.devices = function() {
 };
 
 BlinkHidApi.prototype = {
-	fadeToRGB: function(ms, color, index) {
+	fadeToRGB: function(ms, color, ledSide) {
 		var self = this;
 
 		return new Promise(function(resolve, reject) {
 
-			self.blinker.fadeToRGB(ms || 0, color.red(), color.green(), color.blue(), 0, function(result) {
+			self.blinker.fadeToRGB(ms || 0, color.red(), color.green(), color.blue(), ledSide, function() {
 				resolve();
 			});
 		});
