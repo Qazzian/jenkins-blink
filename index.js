@@ -25,5 +25,5 @@ process.on('SIGTERM', cleanUp);
 process.on('SIGINT', cleanUp);
 
 main();
-intervalId = setInterval(main, 10000);
+intervalId = setInterval(main, 60000);
 

@@ -38,7 +38,7 @@ from the jenkins-blink directory just run
     $ ./index.js
     
 The app runs on a setInterval so it will just carry on polling Jenkins until you kill it. 
-The default is to poll every 10 seconds.
+The default is to poll every minute.
 
 The blink will change colour to match the build status of the jenkins job.
 
