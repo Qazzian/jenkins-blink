@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Get info on Jenkins build and set a colour or pattern for ThingM's blink(1)",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "jenkins-blink": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

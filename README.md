@@ -11,9 +11,17 @@ You will need
 Clone this repository
     $ git clone  git://github.com/Qazzian/jenkins-blink/
 
-Install dependancies
+Install dependencies
     $ cd jenkins-blink
     $ npm install
+
+## Global Install
+
+This is not yet packaged with npm.
+for now, follow the install instructions above and then, from the jenkins-blink dir, run
+	$ npm link
+
+You will then be able to run `jenkins-blink` from anywhere in the terminal
     
 ## Setup your config
 
@@ -36,6 +44,8 @@ The jenkins job name is curently hard coded in index.js so you will need to chan
 
 from the jenkins-blink directory just run 
     $ ./index.js
+
+If you followed the Global Install instructions then just run jenkins-blink in a terminal window
     
 The app runs on a setInterval so it will just carry on polling Jenkins until you kill it. 
 The default is to poll every minute.
@@ -46,7 +56,7 @@ The blink will change colour to match the build status of the jenkins job.
 
 * Move the job name into config.
 * Support more than one job.
-* Create a proper config file and managment system.
+* Create a proper config file and management system.
 * Support multiple effects on the blink such as flashing or fading off after a time.
 * Show a different colour if you are responsible for build failure.
 
@@ -54,6 +64,6 @@ The blink will change colour to match the build status of the jenkins job.
 
 I have only tested this on OSX and nodejs v5.7.1
 
-The connection to the blink1 is different depending on wheather the blink1Controll app is open or not. 
-If you start the this script and then open/quit the controll app then the script will lose the connection and you will need to restart the script.
+The connection to the blink1 is different depending on whether the blink1Control app is open or not.
+If you start the this script and then open/quit the control app then the script will lose the connection and you will need to restart the script.
     
