@@ -8,7 +8,8 @@ module.exports = {
 		success: new Color('#0000ff'),
 		warning: new Color('#ffff00'),
 		connected: new Color('#BA7DE9'),
-		stopped: new Color('#888888')
+		stopped: new Color('#888888'),
+		connectionError: new Color('#ffffff')
 	},
 	jenkins: {
 		hostname: '', 
